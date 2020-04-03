@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int USERNAME_LENGTH = 15;
 
     private TextInputLayout textInputEmail;
     private TextInputLayout textInputPassword;
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         if (usernameInput.isEmpty()) {
             textInputUsername.setError("Username field can't be empty");
             return false;
-        } else if (usernameInput.length() > USERNAME_LENGTH){
+        } else if (usernameInput.length() > 15){
             textInputUsername.setError("Username length exceeds max");
             return false;
         } else{
